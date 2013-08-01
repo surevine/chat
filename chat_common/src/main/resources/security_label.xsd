@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="ProtectiveMarking" type="ProtectiveMarking"/>
+	<xs:complexType name="ProtectiveMarking">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Caveat" type="Caveat"/>
+	<xs:complexType name="Caveat">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="SecurityLabel" type="SecurityLabel"/>
+	<xs:complexType name="SecurityLabel">
+		<xs:sequence>
+			<xs:element name="protectiveMarking" type="ProtectiveMarking" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="caveat" type="Caveat" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="supplementalMarking" type="SupplementalMarking" minOccurs="1" maxOccurs="5"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="SupplementalMarking" type="SupplementalMarking"/>
+	<xs:complexType name="SupplementalMarking" abstract="true">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="type" type="xs:string">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="openGroup"></xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:element name="OpenGroupMarking" type="OpenGroupMarking"/>
+	<xs:complexType name="OpenGroupMarking">
+		<xs:complexContent>
+			<xs:extension base="SupplementalMarking">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>
