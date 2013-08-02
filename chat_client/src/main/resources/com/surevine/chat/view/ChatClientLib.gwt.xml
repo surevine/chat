@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.3.0//EN" "http://google-web-toolkit.googlecode.com/svn/tags/2.3.0/distro-source/core/src/gwt-module.dtd">
+<module>
+	<inherits name="com.google.gwt.user.User" />
+	<inherits name="com.google.gwt.i18n.I18N" />
+	<inherits name="com.google.gwt.inject.Inject" />
+
+	<inherits name='com.calclab.emite.core.EmiteCore' />
+	<inherits name='com.calclab.emite.im.EmiteIM' />
+	<inherits name='com.calclab.emite.xep.storage.EmitePrivateStorage' />
+	<inherits name='com.calclab.hablar.core.HablarCore' />
+	<inherits name='com.calclab.hablar.roster.HablarRoster' />
+	<inherits name='com.calclab.hablar.search.HablarSearch' />
+	<inherits name='com.calclab.hablar.editbuddy.HablarEditBuddy' />
+	<inherits name='com.calclab.hablar.openchat.HablarOpenChat' />
+	<inherits name='com.calclab.hablar.dock.HablarDock' />
+	<inherits name='com.calclab.hablar.user.HablarUser' />
+	<inherits name='com.calclab.hablar.vcard.HablarVCard' />
+	<inherits name='com.calclab.hablar.groupchat.HablarGroupChat' />
+	<inherits name='com.calclab.hablar.rooms.HablarRooms' />
+	<inherits name='com.calclab.hablar.clipboard.HablarClipboard' />
+	<inherits name='com.calclab.hablar.usergroups.HablarUserGroups' />
+	<inherits name='com.calclab.hablar.group.HablarGroup' />
+	<inherits name='com.calclab.hablar.signals.HablarSignals' />
+	<inherits name='com.calclab.hablar.console.HablarConsole' />
+	<inherits name='com.calclab.hablar.icons.HablarIcons' />
+	<inherits name='com.calclab.hablar.Hablar' />
+
+	<inherits name='com.google.gwt.user.theme.chrome.Chrome' />
+	<!-- <inherits name='com.google.gwt.user.theme.standard.Standard' /> -->
+	<!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/> -->
+
+	<inherits name="com.surevine.chat.common.ChatCommonXMPP" />
+
+	<inherits name="com.google.gwt.user.Debug" />
+
+	<!-- Set up the remote logging -->
+	<inherits name="com.allen_sauer.gwt.log.gwt-log-OFF" />
+	<inherits name="com.allen_sauer.gwt.log.gwt-log-RemoteLogger" />
+	<set-property name="log_DivLogger" value="DISABLED" />
+	<set-property name="log_GWTLogger" value="DISABLED" />
+	<set-property name="log_WindowLogger" value="DISABLED" />
+
+	<extend-property name="log_level" values="DEBUG" />
+	<set-property name="log_level" value="DEBUG" />
+
+	<source path="client" />
+</module>
