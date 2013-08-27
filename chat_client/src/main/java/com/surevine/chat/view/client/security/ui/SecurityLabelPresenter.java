@@ -65,8 +65,6 @@ public class SecurityLabelPresenter {
 
             String displayMarkingText = displayMarking.getMarking();
 
-            // TODO This stuff is in completely the wrong place - it should be
-            // in the security label somewhere
             if (xmppSecurityLabel.getLabel() instanceof SecurityLabel) {
                 final SecurityLabel label = (SecurityLabel) xmppSecurityLabel
                         .getLabel();
