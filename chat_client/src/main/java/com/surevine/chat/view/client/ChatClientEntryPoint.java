@@ -31,7 +31,6 @@ import com.calclab.hablar.core.client.HablarWidget;
 import com.calclab.hablar.core.client.container.overlay.OverlayContainer;
 import com.calclab.hablar.core.client.page.PagePresenter.Visibility;
 import com.calclab.hablar.core.client.ui.menu.SimpleAction;
-import com.calclab.hablar.html.client.HtmlConfig;
 import com.calclab.hablar.login.client.HablarLogin;
 import com.calclab.hablar.login.client.LoginConfig;
 import com.calclab.hablar.roster.client.RosterMessages;

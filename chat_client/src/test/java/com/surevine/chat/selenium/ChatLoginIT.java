@@ -41,11 +41,6 @@ public class ChatLoginIT extends SeleneseTestCase {
     private String chatEC2URLBase = "http://" + chatEC2Host + "/chat/";
 
     /**
-     * Port of the Selenium Server.
-     */
-    private int seleniumServerPort = 4444;
-
-    /**
      * Browser start command for Selenium.
      */
     private String browserStartCommand = "*firefox";

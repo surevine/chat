@@ -90,7 +90,7 @@ public class SecurityLabelFactoryTest {
     /**
      * Test the createSecurityLabel method.
      */
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({ "unchecked", "rawtypes" })
     @Test
     public void testCreateSecurityLabel() {
     	IXmlElement outerElement = Mockito.mock(IXmlElement.class);
@@ -122,7 +122,7 @@ public class SecurityLabelFactoryTest {
 
         // +++ SecurityLabels
         List caveatElements = new ArrayList();
-        List caveats = new ArrayList();
+        List<Caveat> caveats = new ArrayList<Caveat>();
 
         for (int i = 0; i < 5; ++i) {
             IXmlElement caveatElement = Mockito.mock(IXmlElement.class);
@@ -139,7 +139,7 @@ public class SecurityLabelFactoryTest {
 
         // +++ Supplemental Markings
         List supplementalMarkingElements = new ArrayList();
-        List supplementalMarkings = new ArrayList();
+        List<SupplementalMarking> supplementalMarkings = new ArrayList<SupplementalMarking>();
 
         for (int i = 0; i < 5; ++i) {
             IXmlElement supplementalMarkingElement = Mockito.mock(IXmlElement.class);

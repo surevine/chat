@@ -164,7 +164,7 @@ public class EmiteXmlElementTest {
      *
      * Note: suppressing warnings as there is some oddity regarding the list generic and Mockito.
      */
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({"unchecked", "rawtypes"})
     @Test
     public void testGetChildrenWithTenChildren() {
         List list = new ArrayList<IPacket>();
@@ -194,7 +194,7 @@ public class EmiteXmlElementTest {
      *
      * Note: suppressing warnings as there is some oddity regarding the list generic and Mockito.
      */
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({"unchecked", "rawtypes"})
     @Test
     public void testGetChildrenWithZeroChildren() {
         List list = Collections.emptyList();
@@ -256,7 +256,7 @@ public class EmiteXmlElementTest {
     /**
      * Test the getChildren method with an element name parameter.
      */
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({"unchecked", "rawtypes"})
     @Test
     public void testGetChildrenWithElementNameForTenChildren() {
         String testString = "TEST";
@@ -301,7 +301,7 @@ public class EmiteXmlElementTest {
     /**
      * Test the getChildren method with an element name parameter.
      */
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({"unchecked", "rawtypes"})
     @Test
     public void testGetChildrenWithElementNameForZeroChildren() {
         String testString = "TEST";

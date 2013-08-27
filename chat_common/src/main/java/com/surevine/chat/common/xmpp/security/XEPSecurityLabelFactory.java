@@ -20,7 +20,7 @@ package com.surevine.chat.common.xmpp.security;
 import java.util.Collections;
 import java.util.List;
 
-import com.google.inject.Inject;
+import com.surevine.chat.common.xmpp.security.label.SecurityLabel;
 import com.surevine.chat.common.xmpp.xml.IXmlElement;
 
 /**
