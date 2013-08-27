@@ -185,6 +185,11 @@
 				<classifier>tests</classifier>
 				<version>0.7-SNAPSHOT</version>
 			</dependency>
+			<dependency>
+				<groupId>com.surevine</groupId>
+				<artifactId>common</artifactId>
+				<version>0.0.3</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -264,7 +269,7 @@
 						<dependency>
 							<groupId>com.surevine</groupId>
 							<artifactId>common</artifactId>
-							<version>0.0.1-SNAPSHOT</version>
+							<version>0.0.3</version>
 						</dependency>
 					</dependencies>
 				</plugin>
@@ -422,6 +427,24 @@
 						</reports>
 					</reportSet>
 				</reportSets>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<configuration>
+					<configLocation>checkstyle/surevine_checks.xml</configLocation>
+					<headerLocation>license/LICENSE.txt</headerLocation>
+					<linkXRef>false</linkXRef>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>findbugs-maven-plugin</artifactId>
+				<configuration>
+					<findbugsXmlOutput>true</findbugsXmlOutput>
+					<findbugsXmlWithMessages>true</findbugsXmlWithMessages>
+					<xmlOutput>true</xmlOutput>
+				</configuration>
 			</plugin>
 		</plugins>
 	</reporting>
