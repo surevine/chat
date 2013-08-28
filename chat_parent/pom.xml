@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Copyright (C) 2010 Surevine Limited
-  
-  This program is free software; you can redistribute it and/or
-  modify it under the terms of the GNU General Public License
-  as published by the Free Software Foundation; either version 2
-  of the License, or (at your option) any later version.
-  
-  This program is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU General Public License for more details.
-  
-  You should have received a copy of the GNU General Public License
-  along with this program.  If not, see {http://www.gnu.org/licenses/}.
--->
+<!-- Copyright (C) 2010 Surevine Limited This program is free software; you 
+	can redistribute it and/or modify it under the terms of the GNU General Public 
+	License as published by the Free Software Foundation; either version 2 of 
+	the License, or (at your option) any later version. This program is distributed 
+	in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even 
+	the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+	See the GNU General Public License for more details. You should have received 
+	a copy of the GNU General Public License along with this program. If not, 
+	see {http://www.gnu.org/licenses/}. -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-	<!-- R O O T   C H A T   C O N F I G U R A T I O N -->
+	<!-- R O O T C H A T C O N F I G U R A T I O N -->
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.surevine.chat</groupId>
 	<artifactId>parent</artifactId>
@@ -28,13 +21,13 @@
 	<description>This project is the parent of all the Chat subprojects</description>
 	<url>https://nexus.surevine.net/sites/chat/</url>
 
-	<!-- C H A T   M O D U L E S -->
+	<!-- C H A T M O D U L E S -->
 	<modules>
 		<module>../chat_common</module>
 		<module>../chat_client</module>
 	</modules>
 
-	<!-- O R G A N I S A T I O N   I N F O R M A T I O N -->
+	<!-- O R G A N I S A T I O N I N F O R M A T I O N -->
 	<organization>
 		<name>Surevine Ltd</name>
 		<url>http://www.surevine.com</url>
@@ -66,9 +59,9 @@
 		</repository>
 	</repositories>
 
-	<!-- D E P E N D E N C Y   M A N A G E M E N T -->
+	<!-- D E P E N D E N C Y M A N A G E M E N T -->
 	<dependencyManagement>
-		<!-- C O R E   D E P E N D E N C I E S -->
+		<!-- C O R E D E P E N D E N C I E S -->
 		<dependencies>
 			<dependency>
 				<groupId>com.surevine.chat</groupId>
@@ -145,7 +138,7 @@
 				<artifactId>urlrewritefilter</artifactId>
 				<version>3.2.0</version>
 			</dependency>
-			<!-- T E S T   D E P E N D E N C I E S -->
+			<!-- T E S T D E P E N D E N C I E S -->
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
@@ -193,7 +186,7 @@
 		</dependencies>
 	</dependencyManagement>
 
-	<!-- B U I L D   C O N F I G U R A T I O N -->
+	<!-- B U I L D C O N F I G U R A T I O N -->
 	<build>
 		<pluginManagement>
 			<plugins>
@@ -205,15 +198,6 @@
 					<configuration>
 						<source>1.6</source>
 						<target>1.6</target>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.8</version>
-					<inherited>true</inherited>
-					<configuration>
-						<reportFormat>xml</reportFormat>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -237,29 +221,6 @@
 					<version>2.2-beta-5</version>
 					<inherited>true</inherited>
 				</plugin>
-				<!-- 
-				<plugin>
-					<groupId>org.codehaus.cargo</groupId>
-					<artifactId>cargo-maven2-plugin</artifactId>
-					<version>1.0.1</version>
-					<inherited>true</inherited>
-					<configuration>
-						<wait>true</wait>
-						<container>
-							<containerId>tomcat6x</containerId>
-							<type>remote</type>
-						</container>
-						<configuration>
-							<type>runtime</type>
-							<properties>
-								<cargo.tomcat.manager.url>${tomcat.manager.url}</cargo.tomcat.manager.url>
-								<cargo.remote.username>${tomcat.manager.username}</cargo.remote.username>
-								<cargo.remote.password>${tomcat.manager.password}</cargo.remote.password>
-							</properties>
-						</configuration>
-					</configuration>
-				</plugin>
-				 -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-checkstyle-plugin</artifactId>
@@ -286,37 +247,18 @@
 					<inherited>true</inherited>
 				</plugin>
 				<plugin>
-					<groupId>org.sonatype.maven.plugin</groupId>
-					<artifactId>emma-maven-plugin</artifactId>
-					<version>1.2</version>
-					<inherited>true</inherited>
-				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>findbugs-maven-plugin</artifactId>
-					<version>2.3.1</version>
-					<inherited>true</inherited>
-				</plugin>
-				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-failsafe-plugin</artifactId>
 					<version>2.5</version>
 					<inherited>true</inherited>
 				</plugin>
 				<plugin>
- 					<groupId>org.apache.maven.plugins</groupId>
- 					<artifactId>maven-site-plugin</artifactId>
- 					<version>2.2</version>
-				</plugin>						
-				<!-- 
-				<plugin>
-        			<groupId>org.codehaus.mojo</groupId>
-        			<artifactId>tomcat-maven-plugin</artifactId>
-        			<version>1.1</version>
-        			<inherited>true</inherited>
-      			</plugin>
-      			 -->
-				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>2.2</version>
+				</plugin>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
@@ -346,13 +288,13 @@
 								<pluginExecution>
 									<pluginExecutionFilter>
 										<groupId>
-											org.sonatype.maven.plugin
+											org.codehaus.mojo
 										</groupId>
 										<artifactId>
 											emma-maven-plugin
 										</artifactId>
 										<versionRange>
-											[1.2,)
+											[1.0-alpha-3,)
 										</versionRange>
 										<goals>
 											<goal>instrument</goal>
@@ -375,20 +317,36 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-			</plugin>		
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 			</plugin>
 			<plugin>
-				<groupId>org.sonatype.maven.plugin</groupId>
+				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>emma-maven-plugin</artifactId>
+				<version>1.0-alpha-3</version>
+				<inherited>true</inherited>
+				<executions>
+					<execution>
+						<phase>process-classes</phase>
+						<goals>
+							<goal>instrument</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<inherited>true</inherited>
+				<configuration>
+					<forkMode>once</forkMode>
+					<reportFormat>xml</reportFormat>
+					<classesDirectory>${project.build.directory}/generated-classes/emma/classes</classesDirectory>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 
-	<!-- D I S T R I B U T I O N   M A N A G E M E N T -->
+	<!-- D I S T R I B U T I O N M A N A G E M E N T -->
 	<distributionManagement>
 		<repository>
 			<id>surevine-releases</id>

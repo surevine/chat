@@ -86,27 +86,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.sonatype.maven.plugin</groupId>
-				<artifactId>emma-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<phase>process-classes</phase>
-						<goals>
-							<goal>instrument</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<configuration>
-					<forkMode>once</forkMode>
-					<reportFormat>xml</reportFormat>
-					<classesDirectory>${project.build.directory}/generated-classes/emma/classes</classesDirectory>
-				</configuration>
-			</plugin>
 		</plugins>
 	</build>
 
@@ -140,12 +119,13 @@
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>emma-maven-plugin</artifactId>
+				<artifactId>surefire-report-maven-plugin</artifactId>
 				<inherited>true</inherited>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>surefire-report-maven-plugin</artifactId>
+				<artifactId>emma-maven-plugin</artifactId>
+				<version>1.0-alpha-3</version>
 				<inherited>true</inherited>
 			</plugin>
 		</plugins>
