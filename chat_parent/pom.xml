@@ -313,6 +313,7 @@
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<configuration>
 					<configLocation>${project.parent.basedir}/build_resources/checkstyle.xml</configLocation>
+					<failsOnError>true</failsOnError>
 				</configuration>
 				<inherited>true</inherited>
 			</plugin>
@@ -324,6 +325,7 @@
 					<findbugsXmlWithMessages>true</findbugsXmlWithMessages>
 					<xmlOutput>true</xmlOutput>
 					<excludeFilterFile>${project.parent.basedir}/build_resources/findbugs-exclude.xml</excludeFilterFile>
+					<failOnError>true</failOnError>
 				</configuration>
 				<inherited>true</inherited>
 			</plugin>
