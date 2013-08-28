@@ -385,6 +385,7 @@
 						</reports>
 					</reportSet>
 				</reportSets>
+				<inherited>true</inherited>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -394,6 +395,7 @@
 					<headerLocation>license/LICENSE.txt</headerLocation>
 					<linkXRef>false</linkXRef>
 				</configuration>
+				<inherited>true</inherited>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -403,6 +405,12 @@
 					<findbugsXmlWithMessages>true</findbugsXmlWithMessages>
 					<xmlOutput>true</xmlOutput>
 				</configuration>
+				<inherited>true</inherited>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>emma-maven-plugin</artifactId>
+				<inherited>true</inherited>
 			</plugin>
 		</plugins>
 	</reporting>
