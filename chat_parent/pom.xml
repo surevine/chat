@@ -316,6 +316,17 @@
 				</configuration>
 				<inherited>true</inherited>
 			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>findbugs-maven-plugin</artifactId>
+				<configuration>
+					<findbugsXmlOutput>true</findbugsXmlOutput>
+					<findbugsXmlWithMessages>true</findbugsXmlWithMessages>
+					<xmlOutput>true</xmlOutput>
+					<excludeFilterFile>${project.parent.basedir}/build_resources/findbugs-exclude.xml</excludeFilterFile>
+				</configuration>
+				<inherited>true</inherited>
+			</plugin>
 		</plugins>
 	</build>
 
@@ -363,19 +374,11 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
-				<configuration>
-					<configLocation>${basedir}/build_resources/checkstyle.xml</configLocation>
-				</configuration>
 				<inherited>true</inherited>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>findbugs-maven-plugin</artifactId>
-				<configuration>
-					<findbugsXmlOutput>true</findbugsXmlOutput>
-					<findbugsXmlWithMessages>true</findbugsXmlWithMessages>
-					<xmlOutput>true</xmlOutput>
-				</configuration>
 				<inherited>true</inherited>
 			</plugin>
 		</plugins>
