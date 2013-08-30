@@ -48,7 +48,6 @@ import com.calclab.hablar.rooms.client.room.RoomWidget;
 import com.calclab.hablar.rooms.client.state.HablarRoomStateManager;
 import com.calclab.hablar.roster.client.page.RosterPage;
 import com.google.inject.Inject;
-import com.surevine.chat.common.xmpp.security.IXmppSecurityLabelExtension;
 import com.surevine.chat.common.xmpp.security.XmppSecurityLabelExtensionFactory;
 import com.surevine.chat.view.client.chat.SecureChatSelectionStrategy;
 import com.surevine.chat.view.client.chat.SecureChatUtility;
@@ -101,16 +100,7 @@ public class HablarSecureRooms {
 
                 final ISecureRoomDisplay secureDisplay = (ISecureRoomDisplay) display;
 
-                final Object securityLabelObject = room.getProperties()
-                        .getData(IXmppSecurityLabelExtension.class.toString());
-
-                IXmppSecurityLabelExtension securityLabel = null;
-
                 SecureRoomPresenter presenter;
-
-                if (securityLabel instanceof IXmppSecurityLabelExtension) {
-                    securityLabel = (IXmppSecurityLabelExtension) securityLabelObject;
-                }
 
                 presenter = new SecureRoomPresenter(session, roster, hablar,
                         roomManager, securityLabelManager,

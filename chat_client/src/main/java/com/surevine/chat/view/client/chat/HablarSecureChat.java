@@ -41,7 +41,6 @@ import com.calclab.hablar.core.client.mvp.HablarEventBus;
 import com.calclab.hablar.core.client.ui.emoticons.EmoticonsChatMessageFormatReplacements;
 import com.calclab.hablar.icons.client.AvatarProviderRegistry;
 import com.google.inject.Inject;
-import com.surevine.chat.common.xmpp.security.IXmppSecurityLabelExtension;
 import com.surevine.chat.common.xmpp.security.XmppSecurityLabelExtensionFactory;
 import com.surevine.chat.view.client.chat.ui.SecureChatDisplay;
 import com.surevine.chat.view.client.chat.ui.SecureChatPresenter;
@@ -94,16 +93,7 @@ public class HablarSecureChat {
 
                 final SecureChatDisplay secureDisplay = (SecureChatDisplay) display;
 
-                final Object securityLabelObject = chat.getProperties()
-                        .getData(IXmppSecurityLabelExtension.class.getName());
-
-                IXmppSecurityLabelExtension securityLabel = null;
-
                 SecureChatPresenter presenter;
-
-                if (securityLabel instanceof IXmppSecurityLabelExtension) {
-                    securityLabel = (IXmppSecurityLabelExtension) securityLabelObject;
-                }
 
                 presenter = new SecureChatPresenter(roster, hablar, chatManager, securityLabelManager, xmppSecurityLabelExtensionFactory, chat, secureDisplay, registry);
                 new SecurityLabelPresenter(secureDisplay.getSecurityLabel(),
