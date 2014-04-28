@@ -15,7 +15,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.surevine.chat</groupId>
 	<artifactId>parent</artifactId>
-	<version>1.11.0</version>
+	<version>1.12.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Chat Parent Project</name>
 	<description>This project is the parent of all the Chat subprojects</description>
@@ -40,7 +40,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<!-- Default build type can be overridden on command line -->
 		<chat.build.type>dev</chat.build.type>
-		<emite.version>surevine-69</emite.version>
+		<emite.version>surevine-70-SNAPSHOT</emite.version>
 		<gwt.version>2.3.0</gwt.version>
 	</properties>
 

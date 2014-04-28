@@ -16,7 +16,7 @@
 		<groupId>com.surevine.chat</groupId>
 		<artifactId>parent</artifactId>
 		<relativePath>../chat_parent/pom.xml</relativePath>
-		<version>1.11.0</version>
+		<version>1.12.0-SNAPSHOT</version>
 	</parent>
 
 	<!-- P R O J E C T C O N F I G U R A T I O N -->
