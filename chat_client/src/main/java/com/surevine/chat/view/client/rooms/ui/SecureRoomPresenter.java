@@ -60,7 +60,7 @@ public class SecureRoomPresenter extends RoomPresenter {
             final XmppSecurityLabelExtensionFactory xmppSecurityLabelExtensionFactory, final Room room,
             final ISecureRoomDisplay display,
             final SecureRoomFactory secureRoomFactory, final AvatarProviderRegistry registry) {
-        super(session, roster, hablar.getEventBus(), room, display, registry, roomManager);
+        super(session, roster, hablar.getEventBus(), room, display, registry);
 
         securityLabel = SecureChatUtility.extractSecurityLabelFromChat(room);
 

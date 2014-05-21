@@ -87,7 +87,7 @@ public class SecureRoomFactory {
 
         final String encodedRoomName = SecureRoomName.encode(roomName,
                 initiator.getResource(), securityLabel.getLabel());
-        final XmppURI roomUri = XmppURI.uri(encodedRoomName, roomsService,
+        final XmppURI roomUri = XmppURI.uri_or_null(encodedRoomName, roomsService,
                 initiator.getNode());
         final ChatProperties properties = new ChatProperties(roomUri);
         properties.setData(IXmppSecurityLabelExtension.class.getName(),
