@@ -221,27 +221,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>gwt-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<configuration>
-							<module>com.surevine.chat.view.ChatClient</module>
-						</configuration>
-						<goals>
-							<goal>compile</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<soyc>false</soyc>
-					<style>PRETTY</style>
-					<inplace>true</inplace>
-					<enableAssertions>false</enableAssertions>
-					<draftCompile>false</draftCompile>
-				</configuration>
-			</plugin>
 		</plugins>
 	</build>
 
