@@ -45,7 +45,7 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.google.code.gwt-log</groupId>
+			<groupId>com.allen-sauer.gwt.log</groupId>
 			<artifactId>gwt-log</artifactId>
 		</dependency>
 		<!-- T E S T D E P E N D E N C I E S -->
